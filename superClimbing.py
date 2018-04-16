@@ -325,10 +325,7 @@ def deleteCategory(category_id):
     if 'username' not in login_session:
         return redirect('/login')
     if categoryToDelete.user_id != login_session['user_id']:
-        return """"<script>function authFunction()
-        {alert('You are not authorized to edit this category.
-        Please create your own category in order to edit.');}
-        </script><body onload='authFunction()'>"""
+        return "<script>function myFunction() {alert('You are not authorized to edit this restaurant. Please create your own restaurant in order to edit.');}</script><body onload='myFunction()'>"  # noqa
     if request.method == 'POST':
         session.delete(categoryToDelete)
         flash('%s Successfully Deleted' % categoryToDelete.name)
@@ -358,10 +355,7 @@ def newItem(category_id):
     if 'username' not in login_session:
         return redirect('/login')
     if login_session['user_id'] != category.user_id:
-        return """"<script>function authFunction()
-        {alert('You are not authorized to edit this category.
-        Please create your own category in order to edit.');}
-        </script><body onload='authFunction()'>"""
+        return "<script>function myFunction() {alert('You are not authorized to edit this restaurant. Please create your own restaurant in order to edit.');}</script><body onload='myFunction()'>"  # noqa
     if request.method == 'POST':
         # verify if requested information is gisven
         i_name = request.form['name']
@@ -413,10 +407,7 @@ def editCategoryItem(category_id, item_id):
     if 'username' not in login_session:
         return redirect('/login')
     if login_session['user_id'] != category.user_id:
-        return """"<script>function authFunction()
-        {alert('You are not authorized to edit this category.
-        Please create your own category in order to edit.');}
-        </script><body onload='authFunction()'>"""
+        return "<script>function myFunction() {alert('You are not authorized to edit this restaurant. Please create your own restaurant in order to edit.');}</script><body onload='myFunction()'>"  # noqa
     if request.method == 'POST':
         if request.form['name']:
             editedItem.name = request.form['name']
@@ -460,10 +451,7 @@ def deleteCategoryItem(category_id, item_id):
     if 'username' not in login_session:
         return redirect('/login')
     if login_session['user_id'] != category.user_id:
-        return """"<script>function authFunction()
-        {alert('You are not authorized to edit this category.
-        Please create your own category in order to edit.');}
-        </script><body onload='authFunction()'>"""
+        return "<script>function myFunction() {alert('You are not authorized to edit this restaurant. Please create your own restaurant in order to edit.');}</script><body onload='myFunction()'>"  # noqa
     if request.method == 'POST':
         session.delete(itemToDelete)
         flash('%s Item Successfully Deleted' % itemToDelete.name)
