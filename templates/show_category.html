@@ -1,0 +1,36 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class = 'flash'>
+       {% with messages = get_flashed_messages() %}
+   {% if messages %}
+
+     <ul>
+     {% for message in messages %}
+         <li> <strong> {{ message }} </strong> </li>
+     {% endfor %}
+     </ul>
+     {% endif %}
+ {% endwith %}
+</div>
+  <div class="category-info-left">
+    <img class="rockclimbing-img" src="{{ category.cat_image_url }}" alt="{{ category.cat_image_filename }}">
+  </div>
+  <div class = "form_container padding-top">
+          <h1> {{ category.name }} </h1>
+          <p class="p-descriptiion"> {{category.description}} </p>
+
+          <a href='{{url_for('showItems', category_id = category.id ) }}'>Show items</a>
+          {% if username != "*" %}
+            <div class="edit-delete-link">
+              <div class="add-item-link">
+                <a href='{{url_for('newItem', category_id = category.id )}}'>Add an Item <span class="glyphicon glyphicon-plus-sign"></span></a> |
+              </div>
+              <a href='{{url_for('editCategory', category_id = category.id ) }}'>
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Edit</a> |
+    					<a href='{{url_for('deleteCategory', category_id = category.id ) }}'>
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Delete</a>
+            </div>
+          {% endif %}
+  <div>
+{% endblock %}

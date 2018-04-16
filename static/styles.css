@@ -1,0 +1,255 @@
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+h1,
+h2 {
+  color: #003366;
+}
+h3,
+h4 {
+    color: #003366;
+}
+h1,
+h2 {
+    font-family: 'georgia', serif;
+    margin: 0;
+}
+h1 {
+    border-bottom: 2px solid #eee;
+}
+
+p,
+dd,
+dt {
+    color: #555;
+}
+a {
+    text-decoration: none;
+    color: #ff8c00;
+    font-size: medium;
+    margin: 5px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+hr {
+    grid-area: divider;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 10px solid #FFA500;
+    margin: 1em 0;
+    padding: 0;
+}
+label {
+		margin-top: 10px;
+  	margin-bottom: 10px;
+}
+select {
+		margin-bottom: 10px;
+}
+
+.add-category-link {
+  	grid-area: main1;
+  	color: #ff8c00;
+}
+.add-item-link {
+  	grid-area: main;
+  	color: #ff8c00;
+		float: left;
+}
+.btn-delete:hover {
+  	background-color: #f44336;
+}
+.btn-delete {
+  	background-color: #062d5f;
+}
+.btn-edit:hover {
+  	background-color: #ffff00;
+}
+.btn-cancel:hover {
+  	background-color: #ffff00;
+}
+.btn-create:hover {
+  	background-color: #35de43;
+}
+.btn-edit {
+  	background-color: #062d5f;
+}
+.btn-cancel {
+  	margin-top: 20px;
+  	background-color: #bad3f2;
+  	margin-left: 500px;
+}
+.btn-create {
+		background-color: #062d5f;
+}
+.btn {
+  	padding: 5px 10px;
+  	background-color: #062d5f;
+  	border-width: 2px;
+  	color: #ea7a25;
+  	font-weight: bold;
+  	margin-top: 10px;
+}
+.banner  {
+  	grid-area: header;
+		height: 150px;
+  	width: 1200px;
+		background: url("/static/img/banner_rock_climbing.jpg");
+  	background-blend-mode: lighten;
+		background-position: right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-left: 30px;
+  	float: left;
+}
+.category {
+    border: 2px solid #ffffcc;
+}
+.categories {
+	  grid-area: main1;
+	  text-align: center;
+	  background-color: #ebccd11c;
+	  margin-top: 20px;
+	  line-height: 1px;
+}
+.category-info-left {
+	  grid-area: main1;
+	  margin-right: 30px;
+}
+.container {
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	  grid-template-areas: "header1 header header3"
+	                       "divider1 divider divider"
+	                       "main1 main main"
+	                       "footer footer footer";
+	  grid-column-gap: 15px;
+	  padding: 10px;
+}
+.container-img-login {
+	  width: 150px;
+	  height: 150px;
+	  margin-top: -50px;
+}
+.current-file-label {
+		background-color: #25509e38;
+		margin-top: 20px;
+}
+
+.edit-delete-link {
+	  color: #ff8c00;
+}
+.edit-rockclimbing-img {
+	  width: 200px;
+	  height: 150px;
+}
+.flash {
+		background-color: #ffffff;
+		width:100%;
+		text-decoration: none;
+		color: #ec1717;
+	  grid-area: divider1;
+}
+.flash li {
+		list-style-type: none;
+		text-align: center;
+}
+.form_container {
+	  grid-area: main;
+}
+.header {
+	  grid-area: header;
+}
+.header-login {
+	  padding: 50px 40px;
+	  box-shadow: 0 5px 15px 0 rgba(46, 61, 73, 0.12);
+	  text-align: center;
+}
+.home {
+	grid-area: header1;
+	color: #ff8c00;
+	float: left;
+}
+.iceclimbing-img {
+	  width: 400px;
+	  height: 400px;
+	  z-index: 2;
+	  border-radius:3px;
+	  left:50%;
+	  overflow:hidden;
+	  position:relative;
+	  top:100px;
+	  transform:translateX(-50%);
+}
+.itemName {
+	  color: #ffffcc;
+}
+.item-img {
+		width: 100px;
+	  height: 100px;
+}
+.items {
+	  grid-area: main;
+	  background-color: #ffffff;
+	  border: 1px groove transparent;
+	  border-radius: 10px;
+	  background-color: #ebccd11c;
+	  margin-top: 20px;
+	  padding: 0px 10px;
+	  line-height: 1px;
+}
+.logo {
+	  width: 100px;
+	  height: 100px;
+	  margin: 10px;
+}
+.main-container-login {
+	  width: 500px;
+	  height: 300px;
+	  text-align: center;
+	  border-radius: 4px;
+	  background-color: #f0d8b9;
+	  margin: 0 auto;
+	  margin-top: 200px;
+}
+.main-logo {
+	  height: 200px;
+	  width: 150px;
+		background: url("/static/img/logoclimbing.jpg");
+		background-repeat: no-repeat;
+	  float: left;
+}
+.p-descriptiion {
+	  font-size: 16px;
+	  line-height: 30px;
+	  text-align: justify;
+}
+.padding-top {
+		padding-top: 60px;
+}
+.price {
+    width: 50%;
+    color: #197d7a;
+}
+.options {
+  	color: #DCD0C0;
+}
+.toplogin {
+  	grid-area: header3;
+}
+.rockclimbing-img {
+	  width: 400px;
+	  height: 400px;
+	  z-index: 2;
+	  border-radius:3px;
+	  left:50%;
+	  overflow:hidden;
+	  position:relative;
+	  top:100px;
+	  transform:translateX(-50%);
+}

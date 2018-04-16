@@ -1,0 +1,51 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="category-info-left">
+  <div class="iceclimbing-img"></div>
+</div>
+<div class = "form_container padding-top">
+        <h1> Edit Item </h1>
+        <br>
+        <form action="#" method = 'POST' enctype="multipart/form-data">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                <label for="name">Name:</label>
+                <input type="text" size="30" name="name" value="{{item.name}}">
+                <br>
+                <label for="description">Description:</label>
+					          <textarea class="form-control" maxlength="350" rows="3" name="description">{{item.description}}</textarea>
+
+					      <label for="price">Price:</label>
+					      <div class="input-group">
+						            <div class="input-group-addon">$</div>
+						            <input type ="text" maxlength="10" class="form-control" name="price" value="{{item.price}}">
+					      </div>
+					      <label for="category">Category:</label>
+                <br>
+                <select name="category" width="300px">
+                  {% for category in listCategories %}
+                    {% if category.id == item.category_id %}
+                      <option name="{{ category.name }}" SELECTED>{{ category.name }} </option>
+                    {% else %}
+                      <option name="{{ category.name }}" >{{ category.name }} </option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+                <br>
+                <label class="current-file-label">Current filename: {{ item.item_image_filename }}</label>
+                <br>
+                <label for="recipe_image">Item Image :</label>
+                <br>
+                <div class="img-item">
+                  <input type="file" class="form-file" name="item_image" id="item_image" aria-describedby="imageHelp">
+                  <small id="imageHelp">Select an image for this item.</small>
+                </div>
+                <button type="submit" class="btn btn-edit" id="submit" type="submit">
+            					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Edit</button>
+        </form>
+        <a href = '{{url_for('superclimbing')}}'>
+             <button class="btn btn-cancel">
+            <span class=" glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+        </a>
+<div>
+{% endblock %}

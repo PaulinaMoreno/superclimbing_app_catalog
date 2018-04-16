@@ -1,0 +1,14 @@
+
+<header class="header" >
+	<h1>Super-Climbing</h1>
+</header>
+<div class="toplogin">
+	{%if 'username' not in session %}
+			<a href="{{url_for('showLogin')}}">Click Here to Login </a>
+			{% else %}
+			<a href="{{url_for('gdisconnect')}}">Logout </a>
+	{% endif %}
+</div>
+<div class="home">
+		<a href='{{url_for('superclimbing')}}'>Home <span class="glyphicon glyphicon-home"></span></a>
+</div>

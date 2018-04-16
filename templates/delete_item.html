@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class = "form_container padding-top">
+  <h1> Are you sure you want to delete "{{item.name}}"? </h1>
+  <br>
+  <form action="#" method = 'POST'>
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+    <button type="submit" class="btn btn-delete" id="submit" type="submit">
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+
+  </form>
+  <a href = '{{url_for('superclimbing')}}'>
+       <button class="btn btn-default btn-cancel">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancel</button>
+  </a>
+  <br>
+
+</div>
+{% endblock %}

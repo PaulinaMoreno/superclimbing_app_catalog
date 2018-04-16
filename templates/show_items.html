@@ -1,0 +1,31 @@
+{% extends "show_category.html" %}
+{% block content %}
+{% include "header.html" %}
+    <div class="category-info-left">
+      <h1> {{category.name}}</h1>
+      <p class="p-descriptiion"> {{category.description}} </p>
+      {% if username != "*" %}
+        <div class="add-item-link">
+          <a href='{{url_for('newItem', category_id = category.id )}}'>Add an Item <span class="glyphicon glyphicon-plus-sign"></span></a>
+        </div>
+      {% endif %}
+    </div>
+    <div class = "form_container padding-top">
+      <h3> Items </h3>
+      {% if not item in items %}
+        <label for="notItems">No items added for this category</label>
+      {% endif %}
+      {% for i in items %}
+        <p>{{i.name}}</p>
+        <img class="item-img" src="{{ i.item_image_url }}" alt="{{ i.item_image_filename }}">
+        <p>{{i.description}}</p>
+				<p class="price">{{i.price}}</p>
+        {% if username != "*" %}
+          <div class = "editdeletepane">
+              <a href='{{url_for('editCategoryItem', category_id = category.id, item_id=i.id)}}'>Edit</a>
+              <a href='{{url_for('deleteCategoryItem', category_id = category.id, item_id=i.id)}}'>Delete</a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+{% endblock %}
