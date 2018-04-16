@@ -23,7 +23,7 @@ csrf = SeaSurf(app)
 csrf.init_app(app)
 
 CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
+    open('client_secrets.json', 'r').read())['web']['client_id']  # Oauth google json file
 APPLICATION_NAME = "Category Application"
 DEFAULT = False
 
@@ -463,5 +463,5 @@ def deleteCategoryItem(category_id, item_id):
 
 if __name__ == '__main__':
     app.debug = True
-    app.config['SECRET_KEY'] = "lYZs5h0W707E-pYaAi8ST-su"
+    app.config['SECRET_KEY'] = "client_secret"  # client_secret from client_secret.json file
     app.run(host='0.0.0.0', port=8000)
