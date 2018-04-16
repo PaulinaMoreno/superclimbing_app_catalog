@@ -24,7 +24,7 @@ cd my-project
        python models.py
       ```
       this will setup the models required for the database.
-   2. in the same directory type :
+   2. In the same directory type :
        ```
          python insert_info.py
        ```
@@ -55,7 +55,7 @@ Find any typos? Have more ideas of questions the reporting tool could answer? Co
 
 First, fork this repository.
 
-![Fork Icon](images/fork-icon.png)
+![Fork Icon](fork-icon.png)
 
 Next, clone this repository to your desktop to make changes.
 
@@ -65,7 +65,7 @@ $ git clone {YOUR_REPOSITORY_CLONE_URL}
 
 Once you've pushed changes to your local repository, you can issue a pull request by clicking on the green pull request icon.
 
-![Pull Request Icon](images/pull-request-icon.png)
+![Pull Request Icon](pull-request-icon.png)
 
 
 Authors
