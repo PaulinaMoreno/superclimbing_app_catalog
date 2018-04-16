@@ -3,7 +3,8 @@
 Superclimbing application is a catalog application that provides a list of items within a variety of climbing categories as well as provide a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items.
 
 ## Requirements
-* Python versions (2.x or 3.x) with psycopg2 installed .
+* Python versions (2.x or 3.x).
+* Flask [http://flask.pocoo.org/docs/0.12/installation/]
 * Flask_seasurf (SeaSurf is a Flask extension for preventing cross-site request forgery (CSRF).)[http://flask-seasurf.readthedocs.io/en/latest/]
 * Flask_uploads (Flask-Uploads allows your application to flexibly and efficiently handle file uploading and serving the uploaded files. )      [https://pythonhosted.org/Flask-Uploads/]
 * Postgresql [https://www.postgresql.org/download/]
